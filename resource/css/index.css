@@ -1,0 +1,80 @@
+body {
+  background: beige;
+  margin: 0;
+  font-family: "Source Snas Pro";
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #204124;
+}
+.navbar_logo {
+  font-size: 24px;
+}
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+}
+.navbar_menu li {
+  padding: 8px 12px;
+}
+.navbar_menu li a:hover {
+  background-color: coral;
+  border-radius: 4px;
+}
+.navbar_link {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+}
+.navbar_link li {
+  padding: 8px 12px;
+}
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: coral;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+  }
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar_link {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar_link li {
+    text-align: center;
+  }
+  .navbar_toggleBtn {
+    display: block;
+  }
+  .navbar_menu.active,
+  .navbar_link.active {
+    display: flex;
+  }
+}
